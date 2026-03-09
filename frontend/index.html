@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Code Documentation Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Markdown renderer -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+
+
+<body>
+
+<div class="main">
+
+<h1>AI Code Documentation Generator</h1>
+
+<div class="card">
+
+<!-- FILE UPLOAD SECTION -->
+
+<h2>Upload Code File</h2>
+
+<input type="file" id="fileInput">
+
+<button onclick="uploadFile()">
+Generate Documentation
+</button>
+
+<br><br>
+
+<!-- GITHUB REPOSITORY ANALYSIS -->
+
+<h2>Analyze GitHub Repository</h2>
+
+<input
+type="text"
+id="repoUrl"
+placeholder="Enter GitHub repository URL"
+style="width:70%; padding:8px;"
+>
+
+<button onclick="analyzeRepo()">
+Analyze Repository
+</button>
+
+
+<!-- STATUS MESSAGE -->
+
+<p id="loading"></p>
+
+
+<!-- RESULT OUTPUT -->
+
+<div id="result"></div>
+
+
+<!-- DOWNLOAD BUTTON -->
+
+<a
+id="downloadBtn"
+href="http://127.0.0.1:8000/download"
+download
+style="display:none;"
+>
+
+<button class="download">
+Download Documentation
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
